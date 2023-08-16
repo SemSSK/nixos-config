@@ -11,6 +11,7 @@ in
 
 	imports = [
 		./theme.nix
+		./picom.nix
 		./rofi
 		./waybar
 	];	
@@ -42,8 +43,6 @@ in
 			enable = true;
 			package = upkgs.firefox;
 		};
-		
-		# chromium.enable = true;
 		
 		git = {
 			enable = true;
@@ -106,12 +105,6 @@ in
 		};
 	
 		bat.enable = true;
-	};
-
-	# wayland.windowManager.hyprland = import ./hyprland.nix;
-
-	services = {
-		picom = import ./picom.nix;
 	};
 
 
