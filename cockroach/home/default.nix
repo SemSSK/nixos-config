@@ -5,7 +5,6 @@
 	imports = [
 		./theme.nix
 		./picom.nix
-		./i3
 	];
 	programs = {
 

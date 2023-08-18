@@ -60,12 +60,9 @@
       # Enable Xfce Desktop Environment
       xfce = {
         enable = true;
-        noDesktop = true;
-        enableXfwm = false;
       };
       plasma5.enable = false;
     };
-    windowManager.i3.enable = true;
       
     displayManager.lightdm.enable = true;
     displayManager.defaultSession = "xfce";
