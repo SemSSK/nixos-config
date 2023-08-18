@@ -26,7 +26,6 @@ in
 			enable = true;
 			icons = true;
 			git = true;
-			enableAliases = true;
 			extraOptions = [
 				"--tree" 
 				"--level=1" 
@@ -59,7 +58,7 @@ in
 	
 	  zellij = {
 			enable = true;
-			enableFishIntegration = true;
+			# enableFishIntegration = true;
 			settings = {
 				theme = "catppuccin-mocha";
 			};
