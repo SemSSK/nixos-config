@@ -29,6 +29,14 @@
           ./caterpillar/system
         ];
       };
+      #desktop
+      cockroach = lib.nixosSystem {
+        inherit system;
+        specialArgs = inputs // {inherit upkgs;};
+        modules = [
+          ./cockroach/system
+        ];
+      };
     };
     homeConfigurations = {
       #laptop
@@ -37,6 +45,14 @@
 	      pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [
           ./caterpillar/home
+        ];
+      };
+      #desktop
+      "sem@cockroach" = lib.homeManagerConfiguration {
+        extraSpecialArgs = inputs // {inherit upkgs;};
+	      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        modules = [
+          ./cockroach/home
         ];
       };
     };
