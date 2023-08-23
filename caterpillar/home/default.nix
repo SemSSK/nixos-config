@@ -73,6 +73,7 @@ in
 						insert = "bar";
 						select = "underline";
 					};
+					line-number = "relative";
 				};
 			};
 		};
