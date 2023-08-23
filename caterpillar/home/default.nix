@@ -12,6 +12,7 @@ in
 	imports = [
 		./theme.nix
 		./picom.nix
+		./helix.nix
 		./rofi
 		./waybar
 	];	
@@ -62,22 +63,8 @@ in
 			settings = {
 				theme = "catppuccin-mocha";
 			};
-		};		
-	
-		helix = {
-			enable = true;
-			settings = {
-				theme = "catppuccin_mocha";
-				editor = {
-					cursor-shape = {
-						insert = "bar";
-						select = "underline";
-					};
-					line-number = "relative";
-				};
-			};
-		};
-	
+		};	
+			
 		starship = {
 			enable = true;
 			enableNushellIntegration = true;
