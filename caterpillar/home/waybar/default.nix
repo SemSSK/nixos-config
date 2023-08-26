@@ -182,6 +182,7 @@
         		};
         		format = "{icon} {capacity}% {time}";
             format-time = "{H}h{M}min";
+            format-charging = "󱐋 {capacity}% {time}";
         		format-icons = [
         			" "
         			" "

@@ -101,7 +101,6 @@ in
 		dbeaver
 		telegram-desktop
 	] ++ (with upkgs; [
-		google-chrome
 	]) ++ hyprland-needed-pkgs;
 
 	home.sessionVariables = {
