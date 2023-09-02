@@ -5,6 +5,7 @@
 	imports = [
 		./theme.nix
 		./picom.nix
+		./helix.nix
 	];
 	programs = {
 
@@ -45,19 +46,6 @@
 	  zellij = {
 			enable = true;
 		};		
-	
-		helix = {
-			enable = true;
-			settings = {
-				theme = "catppuccin_mocha";
-				editor = {
-					cursor-shape = {
-						insert = "bar";
-						select = "underline";
-					};
-				};
-			};
-		};
 	
 		starship = {
 			enable = true;
