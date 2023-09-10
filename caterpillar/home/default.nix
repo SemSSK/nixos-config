@@ -1,10 +1,10 @@
 { config , pkgs, upkgs, unstable, ... }: 
 let
   hyprland-needed-pkgs = with pkgs; [
-    dunst
-    libnotify
-    swww
-		brightnessctl
+  #   dunst
+  #   libnotify
+  #   swww
+		# brightnessctl
 	]; 
 in
 {
@@ -13,8 +13,8 @@ in
 		./theme.nix
 		./picom.nix
 		./helix.nix
-		./rofi
-		./waybar
+		# ./rofi
+		# ./waybar
 	];	
 	
 
