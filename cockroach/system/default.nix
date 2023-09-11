@@ -162,14 +162,7 @@
 		glxinfo
 	  wget
 		nvidia-vaapi-driver
-		(lutris.override {
-      extraLibraries =  pkgs: [
-				wineWowPackages.staging
-				winetricks
-				# dxvk
-      ];
-    })
-  ];
+  ] ++ [upkgs.lutris];
 
   #Default shell
   environment.shells = with pkgs; [
