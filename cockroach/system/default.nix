@@ -147,7 +147,7 @@
 		];
 	};
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;  
-
+  
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -162,8 +162,18 @@
 		glxinfo
 	  wget
 		nvidia-vaapi-driver
-  ] ++ [upkgs.lutris];
-
+    steam-run
+     (steam.override {
+       extraPkgs = pkgs: [ bumblebee glxinfo ];
+    }).run
+  ] ++ [(upkgs.lutris.override {
+    extraPkgs = pkgs: [
+      winePackages.unstableFull
+      wine64Packages.unstable
+     ];
+  }) upkgs.antimicrox];
+  
+  programs.steam.enable = true;
   #Default shell
   environment.shells = with pkgs; [
 			fish

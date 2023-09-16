@@ -82,7 +82,6 @@
 		pandoc
 		distrobox
 	] ++ (with upkgs; [
-		steam-run
 		godot_4
 		obsidian
 	]);
