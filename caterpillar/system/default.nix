@@ -176,6 +176,11 @@
 			fish
   ];
 
+  #Env variables
+  environment.variables = {
+    EDITOR = "hx";
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
