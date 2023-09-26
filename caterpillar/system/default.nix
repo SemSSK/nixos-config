@@ -35,7 +35,7 @@
   # Enable networking
   networking.networkmanager.enable = true;
 	networking.networkmanager.wifi.backend = "iwd";
-	networking.resolvconf.dnsExtensionMechanism = false;
+	# networking.resolvconf.dnsExtensionMechanism = false;
 
 	
   # Set your time zone.
