@@ -14,7 +14,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
 	boot.supportedFilesystems = [ "ntfs" ];
-	
+	boot.kernel.sysctl = { "vm.swappiness" = 10;};
   networking.hostName = "cockroach"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 	# networking.nameservers = [
@@ -31,7 +31,7 @@
   # Enable networking
   networking.networkmanager.enable = true;
 	networking.networkmanager.wifi.backend = "iwd";	
-	networking.resolvconf.dnsExtensionMechanism = false;
+	# networking.resolvconf.dnsExtensionMechanism = false;
 
   # Set your time zone.
   time.timeZone = "Africa/Algiers";
@@ -168,10 +168,11 @@
     }).run
   ] ++ [(upkgs.lutris.override {
     extraPkgs = pkgs: [
-      winePackages.unstableFull
-      wine64Packages.unstable
+        wineWowPackages.stable
+        winetricks
+        jansson
      ];
-  }) upkgs.antimicrox];
+  }) upkgs.antimicrox upkgs.rpcs3];
   
   programs.steam.enable = true;
   #Default shell
