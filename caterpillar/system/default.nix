@@ -106,8 +106,19 @@
   # Configure console keymap
   console.keyMap = "fr";
 
+  #Battery saving
+  services.system76-scheduler.settings.cfsProfiles.enable = true;
+  services.tlp = {
+    enable = true;
+    settings = {
+      CPU_BOOST_ON_AC = 1;
+      CPU_BOOST_ON_BAT = 0;
+      CPU_SCALING_GOVENOR_ON_AC = "performance";
+      CPU_SCALING_GOVENOR_ON_BAT = "powersave";
+    };
+  };
 	services.thermald.enable = true;
-  services.tlp.enable = true;
+  
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
