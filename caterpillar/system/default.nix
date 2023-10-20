@@ -107,7 +107,7 @@
   console.keyMap = "fr";
 
   #Battery saving
-  services.system76-scheduler.settings.cfsProfiles.enable = true;
+  # services.system76-scheduler.settings.cfsProfiles.enable = true;
   services.tlp = {
     enable = true;
     settings = {
