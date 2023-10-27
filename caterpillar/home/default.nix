@@ -95,6 +95,11 @@ in
 		};
 	
 		bat.enable = true;
+
+		thunderbird = {
+			enable = true;
+			profiles.sem.isDefault = true;
+		};
 	};
 
 
