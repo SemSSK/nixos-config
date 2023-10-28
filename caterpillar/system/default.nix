@@ -13,7 +13,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./postgresql.nix
-      # ./flatpak.nix
+      ./flatpak.nix
     ];
 
   # Bootloader.
