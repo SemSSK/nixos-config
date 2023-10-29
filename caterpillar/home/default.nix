@@ -1,20 +1,10 @@
 { config , pkgs, upkgs, unstable, ... }: 
-let
-  hyprland-needed-pkgs = with pkgs; [
-  #   dunst
-  #   libnotify
-  #   swww
-		# brightnessctl
-	]; 
-in
 {
 
 	imports = [
 		./theme.nix
 		./picom.nix
 		./helix.nix
-		# ./rofi
-		# ./waybar
 	];	
 	
 
@@ -109,7 +99,7 @@ in
 		dbeaver
 		telegram-desktop
 	] ++ (with upkgs; [
-	]) ++ hyprland-needed-pkgs;
+	]);
 
 	home.sessionVariables = {
 		# GTK_THEME = "Adwaita:Dark";
