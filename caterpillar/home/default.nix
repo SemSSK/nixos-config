@@ -99,6 +99,7 @@
 		dbeaver
 		telegram-desktop
 	] ++ (with upkgs; [
+		jetbrains.idea-community
 	]);
 
 	home.sessionVariables = {
