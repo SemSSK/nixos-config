@@ -19,6 +19,8 @@
     userSettings = {
       "workbench.colorTheme"= "Catppuccin Mocha";
       "workbench.iconTheme"= "catppuccin-mocha";
+      "window.menuBarVisibility" = "compact";
+      "editor.inlayHints.enabled" = "offUnlessPressed";
     };
   };
 }
