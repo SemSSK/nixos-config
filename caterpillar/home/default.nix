@@ -1,10 +1,10 @@
 { config , pkgs, upkgs, unstable, ... }: 
 {
-
 	imports = [
 		./theme.nix
 		./picom.nix
 		./helix.nix
+		./vscode.nix
 	];	
 	
 
@@ -69,12 +69,7 @@
 			  };
 			};
 		};
-			
-		vscode = {
-			enable = true;
-			package = upkgs.vscode;
-		};
-	
+				
 		kitty = {
 			enable = true;
 			theme = "Catppuccin-Mocha";
