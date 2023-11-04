@@ -1,10 +1,10 @@
-inputs:
+{upkgs,...}:
 {
   programs.vscode = {
     enable = true;
     enableUpdateCheck = false;
-    package = upgks.vscodium;
-    extensions = with inputs.upkgs.vscode-extensions; [
+    package = upkgs.vscodium;
+    extensions = with upkgs.vscode-extensions; [
       llvm-vs-code-extensions.vscode-clangd
       twxs.cmake
       vadimcn.vscode-lldb
@@ -16,5 +16,9 @@ inputs:
       catppuccin.catppuccin-vsc
       catppuccin.catppuccin-vsc-icons
     ];
+    userSettings = {
+      "workbench.colorTheme"= "Catppuccin Mocha";
+      "workbench.iconTheme"= "catppuccin-mocha";
+    };
   };
 }
