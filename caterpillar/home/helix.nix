@@ -1,7 +1,8 @@
-{...}:
+{upkgs,...}:
 {
   programs.helix = {
     enable = true;
+    package = upkgs.helix; 
 		settings = {
   		theme = "catppuccin_mocha";
   		editor = {
@@ -28,22 +29,5 @@
         "A-k" = ["extend_to_line_bounds" "delete_selection" "move_line_up" "paste_before"];
       };
 		};
-    languages = {
-      language = [
-        {
-          name = "java";
-          language-server = { 
-            command = "jdt-language-server";
-          };
-        }
-        {
-          name = "rust";
-          language-server = {
-            command = "ra-multiplex";
-            args = ["client"];
-          };
-        }
-      ];
-    };
   };
 }

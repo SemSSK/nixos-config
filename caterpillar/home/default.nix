@@ -5,6 +5,7 @@
 		./picom.nix
 		./helix.nix
 		./vscode.nix
+		./rofi.nix
 	];	
 	
 
@@ -94,6 +95,7 @@
 		dbeaver
 		telegram-desktop
 	] ++ (with upkgs; [
+    libsForQt5.kdevelop-unwrapped
 	]);
 
 	home.sessionVariables = {

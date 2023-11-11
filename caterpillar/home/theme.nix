@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{pkgs,upkgs, ...}:
 {
   gtk = {
     enable = true;
