@@ -5,7 +5,6 @@
 		./picom.nix
 		./helix.nix
 		./vscode.nix
-		./rofi.nix
 	];	
 	
 
@@ -77,7 +76,10 @@
 			font.name = "JetBrainsMono Nerd Font 14";
 			settings = {
 				font_size = "12.0";
+				hide_window_decorations = true;
+				window_margin_width = 2;
 			};
+
 		};
 	
 		bat.enable = true;
