@@ -3,7 +3,7 @@
 	imports = [
 		./theme.nix
 		./picom.nix
-		./helix.nix
+		./helix
 		./vscode.nix
 	];	
 	

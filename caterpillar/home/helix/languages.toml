@@ -1,0 +1,11 @@
+[language-server.nimlsp]
+command = "nimlsp"
+config.documentFormatting = true
+config.hostInfo = "helix"
+
+[[language]]
+name = "nim"
+auto-format = true
+language-servers = [
+  {name = "nimlsp"},
+]
