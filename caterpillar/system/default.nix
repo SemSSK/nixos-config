@@ -118,11 +118,15 @@
       CPU_SCALING_GOVENOR_ON_BAT = "powersave";
     };
   };
+
 	services.thermald.enable = true;
   
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Enable SSD trim for longer lifetime
+  services.fstrim.enable = true;
+  
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;

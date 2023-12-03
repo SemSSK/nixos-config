@@ -1,4 +1,11 @@
 { config , pkgs, upkgs, unstable, ... }: 
+let unixCommandsReplacement = with upkgs; [
+	sd
+	fd
+	du-dust
+	ripgrep
+];
+in
 {
 	imports = [
 		./theme.nix
@@ -13,7 +20,7 @@
 
 	programs = {
 		
-		exa = {
+		eza = {
 			enable = true;
 			icons = true;
 			git = true;
@@ -25,8 +32,6 @@
 		};
 
 		broot.enable = true;
-
-		
 		direnv = {
 			enable = true;
 			nix-direnv.enable = true;	
@@ -52,7 +57,7 @@
 	
 	  zellij = {
 			enable = true;
-			# enableFishIntegration = true;
+			enableFishIntegration = true;
 			settings = {
 				theme = "catppuccin-mocha";
 			};
@@ -96,8 +101,11 @@
 		htop
 		dbeaver
 		telegram-desktop
-	] ++ (with upkgs; [
+		libsForQt5.qtstyleplugins
+	]++ unixCommandsReplacement ++ (with upkgs; [
     libsForQt5.kdevelop-unwrapped
+		okular
+		unrar
 	]);
 
 	home.sessionVariables = {
