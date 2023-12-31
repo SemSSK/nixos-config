@@ -106,6 +106,9 @@ in
     libsForQt5.kdevelop-unwrapped
 		okular
 		unrar
+		manix
+		whatsapp-for-linux
+		anki
 	]);
 
 	home.sessionVariables = {

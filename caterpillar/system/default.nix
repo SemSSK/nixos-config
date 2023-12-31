@@ -251,6 +251,7 @@
   fonts.fonts = with pkgs; [
   	(nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono"]; })
   ];
+
   
   virtualisation = {
     docker = {
@@ -279,5 +280,6 @@
 	programs.dconf.enable = true;
 	
   system.autoUpgrade.enable = true;
+
 
 }
