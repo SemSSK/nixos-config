@@ -184,6 +184,7 @@
 		xfce.xfce4-clipman-plugin
 		glxinfo
 		xarchiver
+    steam-run
   ];
 
   #Default shell
@@ -248,8 +249,9 @@
   
 	programs.fish.enable = true;
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
   	(nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono"]; })
+    noto-fonts noto-fonts-extra noto-fonts-cjk-sans noto-fonts-cjk-serif
   ];
 
   

@@ -18,6 +18,7 @@ in
   home.username = "sem";
   home.homeDirectory = "/home/sem";
 
+	
 	programs = {
 		
 		eza = {
@@ -51,6 +52,7 @@ in
 		fish = {
 			enable = true;
 			interactiveShellInit = ''
+				alias ls=eza
 				set fish_greeting 
 			'';
 		};
@@ -109,6 +111,8 @@ in
 		manix
 		whatsapp-for-linux
 		anki
+		qbittorrent
+		sshfs
 	]);
 
 	home.sessionVariables = {
