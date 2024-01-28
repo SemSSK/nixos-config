@@ -8,12 +8,12 @@
     backend = "glx";
     fade = true;
   
-    opacityRules = [
-      "95:class_g = 'Code' && focused"
-      "80:class_g = 'Code' && !focused"
-      "90:class_g = 'kitty' && focused"
-      "80:class_g = 'kitty' && !focused"
-    ];
+    # opacityRules = [
+    #   "95:class_g = 'Code' && focused"
+    #   "80:class_g = 'Code' && !focused"
+    #   "90:class_g = 'kitty' && focused"
+    #   "80:class_g = 'kitty' && !focused"
+    # ];
 
 
     settings = {

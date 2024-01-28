@@ -2,7 +2,7 @@ theme = "catppuccin_mocha"
 
 [editor]
 cursorline = true
-rulers = [120]    
+# rulers = [120]    
 line-number = "relative"
 
 [editor.cursor-shape]
@@ -19,6 +19,9 @@ left = ["mode","spinner","version-control","file-name"]
 [editor.lsp]
 display-messages = true
 
+
 [keys.normal]
-"A-j" = ["extend_to_line_bounds","delete_selection","paste_after"]
-"A-k" = ["extend_to_line_bounds","delete_selection","move_line_up","paste_before"]
+"C-j" = ["extend_to_line_bounds","delete_selection","paste_after"]
+"C-down" = ["extend_to_line_bounds","delete_selection","paste_after"]
+"C-k" = ["extend_to_line_bounds","delete_selection","move_line_up","paste_before"]
+"C-up" = ["extend_to_line_bounds","delete_selection","move_line_up","paste_before"]

@@ -26,7 +26,6 @@ in
 			icons = true;
 			git = true;
 			extraOptions = [
-				"--tree" 
 				"--level=1" 
 				"--icons"
 			];
@@ -60,9 +59,11 @@ in
 	  zellij = {
 			enable = true;
 			enableFishIntegration = true;
-			settings = {
-				theme = "catppuccin-mocha";
-			};
+			# settings = {
+			# 	layout = {
+			# 		pane.borderless = true;
+			# 	};
+			# };
 		};	
 			
 		starship = {
@@ -70,10 +71,6 @@ in
 			enableNushellIntegration = true;
 			settings = {
 				add_newline = true;
-				character = {
-			    success_symbol = "➜";
-			    error_symbol = "➜";
-			  };
 			};
 		};
 				
@@ -87,6 +84,16 @@ in
 				window_margin_width = 2;
 			};
 
+		};
+
+		alacritty = {
+			enable = true;
+			package = upkgs.alacritty;
+			settings = {
+				window.decorations = "None";
+				window.startup_mode = "Maximized";
+				font.size = 10.0;
+			};
 		};
 	
 		bat.enable = true;
