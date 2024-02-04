@@ -4,7 +4,7 @@
     enable = true;
     cursorTheme = {
       package = pkgs.catppuccin-cursors.mochaDark;
-      name = "Catppuccin-Mocha-Dark";
+      name = "Catppuccin-Mocha-Dark-Cursors";
     };
     iconTheme = {
       package = pkgs.papirus-icon-theme;
@@ -17,6 +17,16 @@
         size = "compact";
         variant = "mocha";
       };
+    };
+    gtk3.extraConfig = {
+      Settings = ''
+        gtk-application-prefer-dark-theme=1
+      '';
+    };
+    gtk4.extraConfig = {
+      Settings = ''
+        gtk-application-prefer-dark-theme=1
+      '';
     };
     # gtk2.extraConfig = ''
     #   gtk-application-prefer-dark-theme = 1
@@ -61,5 +71,6 @@
   home.sessionVariables = {
     QT_QPA_PLATFORMTHEME = "gtk3";
   };
+  home.sessionVariables.GTK_THEME = "Catppuccin-Macchiato-Compact-Pink-dark";
   
 }

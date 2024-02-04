@@ -13,3 +13,14 @@ language-servers = [
 [[language]]
 name = "cpp"
 auto-format = true
+
+[[language]]
+name = "c"
+auto-format = true
+
+
+[[language]]
+name = "rust"
+
+[language-server.rust-analyzer]
+rust-analyzer.cachePriming.enable = false

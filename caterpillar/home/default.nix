@@ -8,10 +8,11 @@ let unixCommandsReplacement = with upkgs; [
 in
 {
 	imports = [
-		./theme.nix
+		./theme
 		./picom.nix
 		./helix
 		./vscode.nix
+		./hyprland
 	];	
 	
 
@@ -52,6 +53,7 @@ in
 			enable = true;
 			interactiveShellInit = ''
 				alias ls=eza
+				set EDITOR hx
 				set fish_greeting 
 			'';
 		};
@@ -92,7 +94,7 @@ in
 			settings = {
 				window.decorations = "None";
 				window.startup_mode = "Maximized";
-				font.size = 10.0;
+				font.size = 12.0;
 			};
 		};
 	
@@ -109,17 +111,10 @@ in
 	home.packages = with pkgs; [
 		htop
 		dbeaver
-		telegram-desktop
-		libsForQt5.qtstyleplugins
 	]++ unixCommandsReplacement ++ (with upkgs; [
-    libsForQt5.kdevelop-unwrapped
 		okular
 		unrar
-		manix
-		whatsapp-for-linux
-		anki
 		qbittorrent
-		sshfs
 	]);
 
 	home.sessionVariables = {
