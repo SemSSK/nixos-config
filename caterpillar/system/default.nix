@@ -18,7 +18,14 @@
     ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.enable = false;
+
+  boot.loader.grub = {
+    device = "nodev";
+    enable = true;
+    efiSupport = true;
+  };
+  
   boot.loader.efi.canTouchEfiVariables = true;
 	boot.supportedFilesystems = [ "ntfs" ];
 	boot.kernel.sysctl = { "vm.swappiness" = 10;};
