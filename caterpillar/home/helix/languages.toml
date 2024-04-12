@@ -18,9 +18,31 @@ auto-format = true
 name = "c"
 auto-format = true
 
+[[language]]
+name = "python"
+auto-format = true
+
 
 [[language]]
 name = "rust"
 
+[[language]]
+name = "nix"
+auto-format = true
+
+[[language]]
+name = "css"
+auto-format = true
+
+[[language]]
+name = "markdown"
+auto-format = true
+
 [language-server.rust-analyzer]
 rust-analyzer.cachePriming.enable = false
+
+
+[[language]]
+name = "idris"
+scope = "source.idr"
+language-servers = ["idris2-lsp"]

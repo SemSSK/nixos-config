@@ -1,4 +1,7 @@
 {pkgs}:
 pkgs.writeShellScriptBin "hypr-startup" ''
-  echo "Hello world" | ${pkgs.cowsay}/bin/cowsay | ${pkgs.lolcat}/bin/lolcat
+  nm-applet --indicator &
+  swaybg -o "*" -i /home/sem/.background-image/Sweet-S3.png -m fill &
+  waybar &
+  dunst 
 ''

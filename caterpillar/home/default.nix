@@ -4,6 +4,7 @@ let unixCommandsReplacement = with upkgs; [
 	fd
 	du-dust
 	ripgrep
+	fzf
 ];
 in
 {
@@ -42,6 +43,7 @@ in
 			enable = true;
 			package = upkgs.firefox;
 		};
+
 		
 		git = {
 			enable = true;
@@ -110,11 +112,12 @@ in
 	#Installed packages
 	home.packages = with pkgs; [
 		htop
-		dbeaver
 	]++ unixCommandsReplacement ++ (with upkgs; [
-		okular
 		unrar
 		qbittorrent
+		okular
+		lutris
+		wineWowPackages.waylandFull
 	]);
 
 	home.sessionVariables = {

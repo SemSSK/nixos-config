@@ -14,6 +14,7 @@
       ./hardware-configuration.nix
       ./postgresql.nix
       ./flatpak.nix
+      ./plymouth.nix
     ];
 
   # Bootloader.
@@ -22,6 +23,7 @@
 	boot.supportedFilesystems = [ "ntfs" ];
 	boot.kernel.sysctl = { "vm.swappiness" = 10;};
   networking.hostName = "caterpillar"; # Define your hostname.
+
 
 
 

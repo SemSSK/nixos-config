@@ -10,11 +10,10 @@
     
   home.packages = with pkgs; [
     brightnessctl
-    swww
     grim
     swappy
     slurp
-    (import ./hypr-startup.nix {pkgs})
+    swaybg
 	];
   
   wayland.windowManager.hyprland = {
@@ -23,11 +22,7 @@
       $mod = SUPER
 
       # Startup commands
-      exec-once = waybar
-      exec-once = nm-applet
-      exec-once = swww init & swww img  configuration/caterpillar/system/Sweet-space.png
-      exec-once = dunst
-
+      exec-once = ${(import ./hypr-startup.nix {inherit pkgs;})}/bin/hypr-startup
 
       monitor=,preferred,auto,auto
 
@@ -150,7 +145,7 @@
       bind = $mainMod SHIFT, ampersand, movetoworkspace, 1
       bind = $mainMod SHIFT, eacute, movetoworkspace, 2
       bind = $mainMod SHIFT, quotedbl, movetoworkspace, 3
-      bind = $mainMod SHIFT, apostroph, movetoworkspace, 4
+      bind = $mainMod SHIFT, apostrophe, movetoworkspace, 4
       bind = $mainMod SHIFT, parenleft, movetoworkspace, 5
       bind = $mainMod SHIFT, minus, movetoworkspace, 6
       bind = $mainMod SHIFT, egrave, movetoworkspace, 7
