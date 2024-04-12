@@ -23,6 +23,8 @@
 	boot.kernel.sysctl = { "vm.swappiness" = 10;};
   networking.hostName = "caterpillar"; # Define your hostname.
 
+
+
 	networking.nameservers = [
 		"1.1.1.1"
 		"8.8.8.8"
@@ -68,7 +70,7 @@
       xfce.enable = true;
       # gnome.enable = true;
     };
-    displayManager.defaultSession = "xfce";
+    displayManager.defaultSession = "hyprland";
     displayManager.lightdm = {
       enable = true;
       background = ./Sweet-space.png;
@@ -94,9 +96,9 @@
     };
   };
 
-  # programs.hyprland = {
-  #   enable = true;
-  # };
+  programs.hyprland = {
+    enable = true;
+  };
 
   # Configure keymap in X11
   services.xserver = {
@@ -131,6 +133,7 @@
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
+  security.pam.services.swaylock = {};
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -158,7 +161,6 @@
       vlc
       libreoffice-qt
       pavucontrol
-			distrobox
     ];
   };
   

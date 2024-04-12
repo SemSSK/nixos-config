@@ -5,21 +5,11 @@
       style = ''
         window#waybar {
           font-size: 10px;
-        	background: #292b2e;
+        	background-color: transparent /*#292b2e*/;
         	color: #fdf6e3;
+          min-height: 0;
         }
 
-        #custom-right-arrow-dark,
-        #custom-left-arrow-dark {
-        	color: #1a1a1a;
-        }
-        #custom-right-arrow-light,
-        #custom-left-arrow-light {
-        	color: #292b2e;
-        	background: #1a1a1a;
-        }
-
-        #workspaces,
         #clock.1,
         #clock.2,
         #clock.3,
@@ -30,23 +20,32 @@
         #disk,
         #tray {
         	background: #1a1a1a;
+          margin-left:5px;
+          margin-right:5px;
+          border: 1px solid;
+          border-color: #595959;
+          border-radius:20px;
+        }
+        
+        #workspaces {
+          background-color: transparent;
         }
 
         #workspaces button {
-        	padding: 0 2px;
+          background-color:#1a1a1a;
+          padding: 0 5px;
         	color: #268bd2;
+          border: 1px solid;
+          border-color: #595959;
+          border-radius: 20px;
         }
         #workspaces button.active {
         	color: #fdf6e3;
-          border-radius: 15px;
+          border-color: #fdf6e3;
         }
         #workspaces button:hover {
-        	box-shadow: inherit;
-        	text-shadow: inherit;
-        }
-        #workspaces button:hover {
-        	background: #1a1a1a;
-        	border: #1a1a1a;
+        	background-color: #fdf6e3;
+          color: #1a1a1a;
         }
 
         #pulseaudio {
@@ -83,55 +82,22 @@
             "HDMI-A-1"
           ];
           modules-left = [ 
-            "hyprland/workspaces" 
+            "hyprland/workspaces"
           ];
           modules-center = [
-            "custom/left-arrow-dark"
         		"clock#1"
-        		"custom/left-arrow-light"
-        		"custom/left-arrow-dark"
         		"clock#2"
-        		"custom/right-arrow-dark"
-        		"custom/right-arrow-light"
         		"clock#3"
-        		"custom/right-arrow-dark"
           ];
           modules-right = [
-            "custom/left-arrow-dark"
         		"pulseaudio"
-        		"custom/left-arrow-light"
-        		"custom/left-arrow-dark"
         		"memory"
-        		"custom/left-arrow-light"
-        		"custom/left-arrow-dark"
         		"cpu"
-        		"custom/left-arrow-light"
-        		"custom/left-arrow-dark"
         		"battery"
-        		"custom/left-arrow-light"
-        		"custom/left-arrow-dark"
         		"disk"
-        		"custom/left-arrow-light"
-        		"custom/left-arrow-dark"
         		"tray"
           ]; 
 
-          "custom/left-arrow-dark" = {
-        		format = "";
-        		tooltip = false;
-        	};
-        	"custom/left-arrow-light" = {
-        		format = "";
-        		tooltip = false;
-        	};
-        	"custom/right-arrow-dark" = {
-        		format = "";
-        		tooltip = false;
-        	};
-        	"custom/right-arrow-light" = {
-        		format = "";
-        		tooltip = false;
-        	};
           "hyprland/workspaces" = {
             disable-scroll = true;
             all-outputs = true;
