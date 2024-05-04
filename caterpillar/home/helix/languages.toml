@@ -46,3 +46,15 @@ rust-analyzer.cachePriming.enable = false
 name = "idris"
 scope = "source.idr"
 language-servers = ["idris2-lsp"]
+
+
+[[language]]
+name = "nix"
+scope = "source.nix"
+auto-format = true
+language-servers = ["nixd"]
+
+[language-server.nixd]
+command = "nixd"
+config.documentFormatting = true
+config.hostInfo = "helix"

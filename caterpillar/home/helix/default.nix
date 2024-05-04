@@ -13,5 +13,8 @@
   programs.helix = {
     enable = true;
     package = upkgs.helix; 
-  };
+  };  
+  home.packages = with upkgs; [
+    nixd
+  ];
 }

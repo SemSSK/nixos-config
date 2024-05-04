@@ -62,7 +62,7 @@
       decoration {
       	# See https://wiki.hyprland.org/Configuring/Variables/ for more
 
-      	rounding = 5
+      	rounding = 0
       }
 
       animations {
@@ -164,7 +164,7 @@
 
       # window rules
       # opacity
-      windowrule = opacity 0.9 0.9,^(kitty)$
+      windowrule = opacity 0.9 0.9,^(alacritty)$
 
       # Brightness control
       bind= ,XF86MonBrightnessDown,exec,brightnessctl set 5%-

@@ -50,7 +50,9 @@ in
 			userEmail = "ssksem015@gmail.com";
 			userName = "semssk";
 		};
-					
+
+		lazygit.enable = true;			
+		
 		fish = {
 			enable = true;
 			interactiveShellInit = ''
@@ -62,33 +64,26 @@ in
 	
 	  zellij = {
 			enable = true;
-			enableFishIntegration = true;
-			# settings = {
-			# 	layout = {
-			# 		pane.borderless = true;
-			# 	};
-			# };
+			# enableFishIntegration = true;
 		};	
 			
 		starship = {
 			enable = true;
-			enableNushellIntegration = true;
 			settings = {
 				add_newline = true;
 			};
 		};
 				
-		kitty = {
-			enable = true;
-			theme = "Catppuccin-Mocha";
-			font.name = "JetBrainsMono Nerd Font 14";
-			settings = {
-				font_size = "12.0";
-				hide_window_decorations = true;
-				window_margin_width = 2;
-			};
-
-		};
+		# kitty = {
+		# 	enable = true;
+		# 	theme = "Catppuccin-Mocha";
+		# 	font.name = "JetBrainsMono Nerd Font 14";
+		# 	settings = {
+		# 		font_size = "12.0";
+		# 		hide_window_decorations = true;
+		# 		window_margin_width = 2;
+		# 	};
+		# };
 
 		alacritty = {
 			enable = true;
@@ -96,9 +91,24 @@ in
 			settings = {
 				window.decorations = "None";
 				window.startup_mode = "Maximized";
+				window.padding = {
+					x=5;
+					y=2;
+				};
 				font.size = 12.0;
 			};
 		};
+
+		# wezterm = {
+		# 	enable = true;
+		# 	package = upkgs.wezterm;
+		# 	extraConfig = ''
+		# 		local wezter = require 'wezterm'
+		# 		local config = wezter.config_builder()
+		# 		config.color_scheme = 'catppuccin-mocha'
+		# 		return config
+		# 	'';
+		# };
 	
 		bat.enable = true;
 
@@ -114,10 +124,13 @@ in
 		htop
 	]++ unixCommandsReplacement ++ (with upkgs; [
 		unrar
-		qbittorrent
+		unzip
+		zip
+		# qbittorrent
 		okular
 		lutris
 		wineWowPackages.waylandFull
+		openmw
 	]);
 
 	home.sessionVariables = {

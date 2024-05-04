@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, upkgs, hyprland,... }:
+{ lib,config, pkgs, upkgs, hyprland,... }:
 {
   xdg.portal = {
     enable = true;
@@ -12,7 +12,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./postgresql.nix
+      # ./postgresql.nix
       ./flatpak.nix
       ./plymouth.nix
     ];
@@ -248,6 +248,7 @@
     substituters = ["https://hyprland.cachix.org"];
     trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
+  nix.channel.enable = false;
 
 	programs.thunar.enable = true;
   programs.thunar.plugins = with pkgs.xfce; [
