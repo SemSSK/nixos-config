@@ -6,6 +6,7 @@
     ./waybar.nix
     ./rofi.nix
     ./dunst.nix
+    # ./agsconfig
   ];
     
   home.packages = with pkgs; [
@@ -98,7 +99,8 @@
 
       # Example per-device config
       # See https://wiki.hyprland.org/Configuring/Keywords/#executing for more
-      device:epic-mouse-v1 {
+      device {
+      name = epic-mouse-v1 
       sensitivity = -0.5
       }
 
@@ -108,7 +110,10 @@
       # windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
       # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
 
+
       # Window Rules
+      windowrulev2 = stayfocused, title:^()$,class:^(steam)$
+      windowrulev2 = minsize 1 1, title:^()$,class:^(steam)$
 
       # See https://wiki.hyprland.org/Configuring/Keywords/ for more
       $mainMod = SUPER
@@ -123,6 +128,10 @@
       bind = $mainMod, P, pseudo, # dwindle
       bind = $mainMod, J, togglesplit, # dwindle
 
+      # Toggling window fullscreen
+      bind = $mainMod SHIFT, F, fullscreen, 0 
+      bind = $mainMod, F, fullscreen, 1
+      
       # Move focus with mainMod + arrow keys
       bind = $mainMod, left, movefocus, l
       bind = $mainMod, right, movefocus, r
@@ -159,7 +168,7 @@
 
       # Move/resize windows with mainMod + LMB/RMB and dragging
       bindm = $mainMod, mouse:272, movewindow
-      bindm = $mainMod, mouse:273, resizewindow
+      bindm = $mainMod SHIFT, mouse:272, resizewindow
 
 
       # window rules

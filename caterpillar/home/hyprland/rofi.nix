@@ -51,6 +51,7 @@
 		    background-color: @bg-col;
 		}
 
+
 		mainbox {
 		    background-color: @bg-col;
 		}

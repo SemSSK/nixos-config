@@ -173,6 +173,7 @@
     ];
   };
   
+  
   # Unable pulseaudio
   nixpkgs.config.pulseaudio = true;
 
@@ -184,6 +185,10 @@
 		enable = true;
 	};
 
+  # Enable bluetooth
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.package = pkgs.bluez;
+  services.blueman.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -197,6 +202,8 @@
 		xarchiver
     steam-run
   ];
+
+  programs.steam.enable = true;
 
   #Default shell
   environment.shells = with pkgs; [

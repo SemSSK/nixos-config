@@ -41,7 +41,6 @@ auto-format = true
 [language-server.rust-analyzer]
 rust-analyzer.cachePriming.enable = false
 
-
 [[language]]
 name = "idris"
 scope = "source.idr"

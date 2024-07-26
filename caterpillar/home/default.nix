@@ -1,11 +1,12 @@
 { config , pkgs, upkgs, unstable, ... }: 
-let unixCommandsReplacement = with upkgs; [
-	sd
-	fd
-	du-dust
-	ripgrep
-	fzf
-];
+let 
+	unixCommandsReplacement = with upkgs; [
+		sd
+		fd
+		du-dust
+		ripgrep
+		fzf
+	];
 in
 {
 	imports = [
@@ -34,6 +35,10 @@ in
 		};
 
 		broot.enable = true;
+		yazi = {
+			enable = true;
+			enableFishIntegration = true;
+		};
 		direnv = {
 			enable = true;
 			nix-direnv.enable = true;	
@@ -61,6 +66,7 @@ in
 				set fish_greeting 
 			'';
 		};
+
 	
 	  zellij = {
 			enable = true;
@@ -122,15 +128,18 @@ in
 	#Installed packages
 	home.packages = with pkgs; [
 		htop
+		qbittorrent
+		gnome.gnome-disk-utility
 	]++ unixCommandsReplacement ++ (with upkgs; [
 		unrar
 		unzip
 		zip
-		# qbittorrent
 		okular
 		lutris
 		wineWowPackages.waylandFull
 		openmw
+		freetube
+		bottles
 	]);
 
 	home.sessionVariables = {
