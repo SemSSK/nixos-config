@@ -12,11 +12,11 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      # ./postgresql.nix
-      ./flatpak.nix
+      # ./flatpak.nix
       ./plymouth.nix
+      ../../themes.nix
+      # ./postgresql.nix
     ];
-
   # Bootloader.
   boot.loader.systemd-boot.enable = false;
 
@@ -82,25 +82,8 @@
     displayManager.defaultSession = "hyprland";
     displayManager.lightdm = {
       enable = true;
-      background = ./Sweet-space.png;
       greeters.slick = {
         enable = true;
-        theme = {
-          name = "Catppuccin-Macchiato-Compact-Pink-dark";
-          package = pkgs.catppuccin-gtk.override {
-            accents = [ "pink" ];
-            size = "compact";
-            variant = "mocha";
-          };
-        };
-        iconTheme = {
-          package = pkgs.papirus-icon-theme;
-          name = "Papirus-Dark";
-        };
-        cursorTheme = {
-          package = pkgs.catppuccin-cursors.mochaDark;
-          name = "Catppuccin-Mocha-Dark";
-        };
       };
     };
   };
@@ -203,7 +186,7 @@
     steam-run
   ];
 
-  programs.steam.enable = true;
+  # programs.steam.enable = true;
 
   #Default shell
   environment.shells = with pkgs; [

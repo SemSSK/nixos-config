@@ -7,14 +7,16 @@ let
 		ripgrep
 		fzf
 	];
+
 in
 {
 	imports = [
-		./theme
+		# ./theme
 		./picom.nix
 		./helix
 		./vscode.nix
 		./hyprland
+		../../themes.nix
 	];	
 	
 
@@ -101,7 +103,6 @@ in
 					x=5;
 					y=2;
 				};
-				font.size = 12.0;
 			};
 		};
 

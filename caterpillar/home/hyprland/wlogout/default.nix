@@ -1,7 +1,7 @@
 {config,pkgs,upkgs,...}:
 {
   imports = [
-    ./swaylock.nix
+    # ./swaylock.nix
   ];
   services.swayidle = {
     enable = true;

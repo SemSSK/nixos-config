@@ -1,8 +1,7 @@
-theme = "catppuccin_mocha"
+# theme = "catppuccin-mocha"
 
 [editor]
 cursorline = true
-rulers = [80]    
 line-number = "relative"
 
 [editor.cursor-shape]

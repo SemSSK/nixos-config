@@ -2,10 +2,10 @@
 {
 
   imports = [
-    ./wlogout
     ./waybar.nix
-    ./rofi.nix
     ./dunst.nix
+    ./wlogout
+    # ./rofi.nix
     # ./agsconfig
   ];
     
@@ -15,6 +15,7 @@
     swappy
     slurp
     swaybg
+    sirula
 	];
   
   wayland.windowManager.hyprland = {
@@ -89,7 +90,7 @@
 
       master {
       	# See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-      	new_is_master = true
+        new_status = master
       }
 
       gestures {
@@ -124,7 +125,7 @@
       bind = $mainMod, C, killactive, 
       bind = $mainMod, E, exec, thunar
       bind = $mainMod, V, togglefloating, 
-      bind = $mainMod, R, exec, rofi -show drun
+      bind = $mainMod, R, exec, sirula      
       bind = $mainMod, P, pseudo, # dwindle
       bind = $mainMod, J, togglesplit, # dwindle
 
