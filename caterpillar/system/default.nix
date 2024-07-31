@@ -70,20 +70,22 @@
 
   
   # Enable the X11 windowing system.
-  services.xserver = {
-    enable = true;
-    
-    desktopManager = {
-      xterm.enable = false;
-      # Enable Xfce Desktop Environment
-      xfce.enable = true;
-      # gnome.enable = true;
-    };
+  services = {
     displayManager.defaultSession = "hyprland";
-    displayManager.lightdm = {
+    xserver = {
       enable = true;
-      greeters.slick = {
+    
+      desktopManager = {
+        xterm.enable = false;
+        # Enable Xfce Desktop Environment
+        xfce.enable = true;
+        # gnome.enable = true;
+      };
+      displayManager.lightdm = {
         enable = true;
+        greeters.slick = {
+          enable = true;
+        };
       };
     };
   };
@@ -94,8 +96,10 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "fr";
-    xkbVariant = "azerty";
+    xkb = {
+      variant = "azerty";
+      layout = "fr";
+    };
   };
 
   # Configure console keymap
