@@ -286,8 +286,5 @@
   };
 	
 	programs.dconf.enable = true;
-	
-  system.autoUpgrade.enable = true;
-
 
 }
