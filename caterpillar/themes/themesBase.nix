@@ -1,6 +1,6 @@
 {config,pkgs,...}:
 let
-  wallpaperPath = ../assets/Sweet-S3.png;
+  wallpaperPath = ../../assets/Sweet-S3.png;
 in
 {
   stylix = {

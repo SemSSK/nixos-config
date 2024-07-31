@@ -16,7 +16,7 @@ in
 		./helix
 		./vscode.nix
 		./hyprland
-		../themes.nix
+    ../themes/themesHomeManager.nix
 	];	
 	
 

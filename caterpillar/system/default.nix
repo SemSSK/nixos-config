@@ -14,7 +14,7 @@
       ./hardware-configuration.nix
       # ./flatpak.nix
       ./plymouth.nix
-      ../themes.nix
+      ../themes/themesNixos.nix
       # ./postgresql.nix
     ];
   # Bootloader.
