@@ -7,5 +7,10 @@
       package = pkgs.papirus-icon-theme;
       size = "32x32";
     };
+    settings = {
+      global = {
+        corner_radius = 20;
+      };
+    };
   };
 }
