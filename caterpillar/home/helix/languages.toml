@@ -26,9 +26,6 @@ auto-format = true
 [[language]]
 name = "rust"
 
-[[language]]
-name = "nix"
-auto-format = true
 
 [[language]]
 name = "css"
@@ -57,3 +54,4 @@ language-servers = ["nixd"]
 command = "nixd"
 config.documentFormatting = true
 config.hostInfo = "helix"
+
