@@ -5,7 +5,7 @@
       style = ''
         window#waybar {
           font-size: 10px;
-        	background-color: transparent /*#292b2e*/;
+        	background-color: transparent;
         	color: #fdf6e3;
           min-height: 0;
         }
@@ -24,7 +24,7 @@
           margin-right:5px;
           border: 1px solid;
           border-color: #595959;
-          border-radius:20px;
+          border-radius:5px;
         }
         
         #workspaces {
@@ -37,7 +37,7 @@
         	color: #268bd2;
           border: 1px solid;
           border-color: #595959;
-          border-radius: 20px;
+          border-radius: 5px;
         }
         #workspaces button.active {
         	color: #fdf6e3;

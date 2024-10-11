@@ -38,11 +38,6 @@ auto-format = true
 [language-server.rust-analyzer]
 rust-analyzer.cachePriming.enable = false
 
-[[language]]
-name = "idris"
-scope = "source.idr"
-language-servers = ["idris2-lsp"]
-
 
 [[language]]
 name = "nix"

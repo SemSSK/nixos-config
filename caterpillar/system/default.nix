@@ -27,7 +27,7 @@
   };
   
   boot.loader.efi.canTouchEfiVariables = true;
-	boot.supportedFilesystems = [ "ntfs" ];
+	boot.supportedFilesystems = [ "ntfs" "exfat" ];
 	boot.kernel.sysctl = { "vm.swappiness" = 10;};
   networking.hostName = "caterpillar"; # Define your hostname.
 
@@ -79,7 +79,6 @@
         xterm.enable = false;
         # Enable Xfce Desktop Environment
         xfce.enable = true;
-        # gnome.enable = true;
       };
       displayManager.lightdm = {
         enable = true;
