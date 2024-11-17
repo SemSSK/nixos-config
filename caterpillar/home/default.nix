@@ -139,8 +139,8 @@ in
 		lutris
 		wineWowPackages.waylandFull
 		openmw
-		freetube
-		bottles
+		# freetube
+		# bottles
 	]);
 
 	home.sessionVariables = {
