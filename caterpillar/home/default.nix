@@ -14,6 +14,7 @@ in
 		# ./theme
 		./picom.nix
 		./helix
+		./emacs
 		./vscode.nix
 		./hyprland
     ../themes/themesHomeManager.nix
@@ -82,16 +83,15 @@ in
 			};
 		};
 				
-		# kitty = {
-		# 	enable = true;
-		# 	theme = "Catppuccin-Mocha";
-		# 	font.name = "JetBrainsMono Nerd Font 14";
-		# 	settings = {
-		# 		font_size = "12.0";
-		# 		hide_window_decorations = true;
-		# 		window_margin_width = 2;
-		# 	};
-		# };
+		kitty = {
+			enable = true;
+			# font.name = "JetBrainsMono Nerd Font 14";
+			settings = {
+				font_size = "12.0";
+				hide_window_decorations = true;
+				window_margin_width = 2;
+			};
+		};
 
 		alacritty = {
 			enable = true;
@@ -108,13 +108,6 @@ in
 
 		# wezterm = {
 		# 	enable = true;
-		# 	package = upkgs.wezterm;
-		# 	extraConfig = ''
-		# 		local wezter = require 'wezterm'
-		# 		local config = wezter.config_builder()
-		# 		config.color_scheme = 'catppuccin-mocha'
-		# 		return config
-		# 	'';
 		# };
 	
 		bat.enable = true;
