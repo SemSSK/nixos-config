@@ -16,6 +16,7 @@
       ./plymouth.nix
       ../themes/themesNixos.nix
       # ./postgresql.nix
+      ../cachix.nix
     ];
   # Bootloader.
   boot.loader.systemd-boot.enable = false;
@@ -93,6 +94,8 @@
     enable = true;
   };
 
+  programs.kdeconnect.enable = true;
+
   # Configure keymap in X11
   services.xserver = {
     xkb = {
@@ -125,7 +128,7 @@
   services.fstrim.enable = true;
   
   # Enable sound with pipewire.
-  sound.enable = true;
+  # sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   security.pam.services.swaylock = {};
@@ -229,7 +232,7 @@
   system.stateVersion = "23.05"; # Did you read the comment?
 
   nix = {
-  	package = pkgs.nixFlakes;
+  	package = pkgs.nixVersions.stable;
 		extraOptions = "experimental-features = nix-command flakes";
   };
   nix.gc = {

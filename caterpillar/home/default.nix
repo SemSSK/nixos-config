@@ -1,4 +1,4 @@
-{ config , pkgs, upkgs, unstable, ... }: 
+{ config , pkgs, upkgs, unstable, openmw-nix,... }: 
 let 
 	unixCommandsReplacement = with upkgs; [
 		sd
@@ -12,9 +12,9 @@ in
 {
 	imports = [
 		# ./theme
+		# ./emacs
 		./picom.nix
 		./helix
-		./emacs
 		./vscode.nix
 		./hyprland
     ../themes/themesHomeManager.nix
@@ -29,7 +29,7 @@ in
 		
 		eza = {
 			enable = true;
-			icons = true;
+			icons = "auto";
 			git = true;
 			extraOptions = [
 				"--level=1" 
@@ -131,7 +131,8 @@ in
 		okular
 		lutris
 		wineWowPackages.waylandFull
-		openmw
+		# openmw
+		openmw-nix.packages."x86_64-linux".openmw-dev
 		# freetube
 		# bottles
 	]);
