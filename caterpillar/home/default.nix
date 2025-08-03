@@ -1,4 +1,4 @@
-{ config , pkgs, upkgs, unstable, openmw-nix,... }: 
+{ config , pkgs, upkgs, unstable, ... }: 
 let 
 	unixCommandsReplacement = with upkgs; [
 		sd
@@ -11,13 +11,12 @@ let
 in
 {
 	imports = [
-		# ./theme
-		# ./emacs
 		./picom.nix
 		./helix
 		./vscode.nix
 		./hyprland
     ../themes/themesHomeManager.nix
+		./niri
 	];	
 	
 
@@ -36,12 +35,6 @@ in
 				"--icons"
 			];
 		};
-
-		broot.enable = true;
-		yazi = {
-			enable = true;
-			enableFishIntegration = true;
-		};
 		direnv = {
 			enable = true;
 			nix-direnv.enable = true;	
@@ -51,7 +44,6 @@ in
 			enable = true;
 			package = upkgs.firefox;
 		};
-
 		
 		git = {
 			enable = true;
@@ -85,7 +77,6 @@ in
 				
 		kitty = {
 			enable = true;
-			# font.name = "JetBrainsMono Nerd Font 14";
 			settings = {
 				font_size = "12.0";
 				hide_window_decorations = true;
@@ -106,10 +97,6 @@ in
 			};
 		};
 
-		# wezterm = {
-		# 	enable = true;
-		# };
-	
 		bat.enable = true;
 
 		thunderbird = {
@@ -123,7 +110,6 @@ in
 	home.packages = with pkgs; [
 		htop
 		qbittorrent
-		gnome.gnome-disk-utility
 	]++ unixCommandsReplacement ++ (with upkgs; [
 		unrar
 		unzip
@@ -132,7 +118,7 @@ in
 		lutris
 		wineWowPackages.waylandFull
 		# openmw
-		openmw-nix.packages."x86_64-linux".openmw-dev
+		# openmw-nix.packages."x86_64-linux".openmw-dev
 		# freetube
 		# bottles
 	]);

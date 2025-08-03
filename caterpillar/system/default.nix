@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ lib,config, pkgs, upkgs, hyprland,... }:
+{ lib,config, pkgs, upkgs, ... }:
 {
   xdg.portal = {
     enable = true;
@@ -73,6 +73,11 @@
   # Enable the X11 windowing system.
   services = {
     displayManager.defaultSession = "hyprland";
+    desktopManager.cosmic = {
+      enable = true;
+      xwayland.enable = true;
+    };
+    displayManager.cosmic-greeter.enable = true;
     xserver = {
       enable = true;
     
@@ -81,18 +86,19 @@
         # Enable Xfce Desktop Environment
         xfce.enable = true;
       };
-      displayManager.lightdm = {
-        enable = true;
-        greeters.slick = {
-          enable = true;
-        };
-      };
+      # displayManager.lightdm = {
+      #   enable = true;
+      #   greeters.slick = {
+      #     enable = true;
+      #   };
+      # };
     };
   };
 
   programs.hyprland = {
     enable = true;
   };
+
 
   programs.kdeconnect.enable = true;
 
@@ -109,15 +115,15 @@
 
   #Battery saving
   # services.system76-scheduler.settings.cfsProfiles.enable = true;
-  services.tlp = {
-    enable = true;
-    settings = {
-      CPU_BOOST_ON_AC = 1;
-      CPU_BOOST_ON_BAT = 0;
-      CPU_SCALING_GOVENOR_ON_AC = "performance";
-      CPU_SCALING_GOVENOR_ON_BAT = "powersave";
-    };
-  };
+  # services.tlp = {
+  #   enable = true;
+  #   settings = {
+  #     CPU_BOOST_ON_AC = 1;
+  #     CPU_BOOST_ON_BAT = 0;
+  #     CPU_SCALING_GOVENOR_ON_AC = "performance";
+  #     CPU_SCALING_GOVENOR_ON_BAT = "powersave";
+  #   };
+  # };
 
 	services.thermald.enable = true;
   
@@ -129,7 +135,7 @@
   
   # Enable sound with pipewire.
   # sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   security.pam.services.swaylock = {};
   services.pipewire = {
@@ -170,9 +176,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # Enable opengl
-  hardware.opengl = {
-		enable = true;
-	};
+  hardware.graphics.enable = true;
 
   # Enable bluetooth
   hardware.bluetooth.enable = true;
@@ -183,7 +187,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 		vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-		virt-manager
+		# virt-manager
 		xfce.xfce4-whiskermenu-plugin
 		xfce.xfce4-pulseaudio-plugin
 		xfce.xfce4-clipman-plugin
@@ -258,34 +262,36 @@
 	programs.fish.enable = true;
 
   fonts.packages = with pkgs; [
-  	(nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "JetBrainsMono"]; })
+    nerd-fonts.fira-code
+    nerd-fonts.droid-sans-mono
+    nerd-fonts.jetbrains-mono
     noto-fonts noto-fonts-extra noto-fonts-cjk-sans noto-fonts-cjk-serif
   ];
 
   
-  virtualisation = {
-    docker = {
-      enable = true;
-      rootless = {
-        enable = true;
-				setSocketVariable = true;
-      };
-    };
-		podman = {
-      enable = true;
-      # Create a `docker` alias for podman, to use it as a drop-in replacement
-			defaultNetwork.settings = {
-			  dns_enabled = true;
-			};
-      # Required for containers under podman-compose to be able to talk to each other.
-      # defaultNetwork.dnsname.enable = true;
-      # For Nixos version > 22.11
+  # virtualisation = {
+  #   docker = {
+  #     enable = true;
+  #     rootless = {
+  #       enable = true;
+		# 		setSocketVariable = true;
+  #     };
+  #   };
+		# podman = {
+  #     enable = true;
+  #     # Create a `docker` alias for podman, to use it as a drop-in replacement
+		# 	defaultNetwork.settings = {
+		# 	  dns_enabled = true;
+		# 	};
+  #     # Required for containers under podman-compose to be able to talk to each other.
+  #     # defaultNetwork.dnsname.enable = true;
+  #     # For Nixos version > 22.11
       
-    };
-		libvirtd = {
-			enable = true;
-		};
-  };
+  #   };
+		# libvirtd = {
+		# 	enable = true;
+		# };
+  # };
 	
 	programs.dconf.enable = true;
 
