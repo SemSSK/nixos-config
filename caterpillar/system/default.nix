@@ -73,11 +73,6 @@
   # Enable the X11 windowing system.
   services = {
     displayManager.defaultSession = "hyprland";
-    desktopManager.cosmic = {
-      enable = true;
-      xwayland.enable = true;
-    };
-    displayManager.cosmic-greeter.enable = true;
     xserver = {
       enable = true;
     
@@ -86,12 +81,12 @@
         # Enable Xfce Desktop Environment
         xfce.enable = true;
       };
-      # displayManager.lightdm = {
-      #   enable = true;
-      #   greeters.slick = {
-      #     enable = true;
-      #   };
-      # };
+      displayManager.lightdm = {
+        enable = true;
+        greeters.slick = {
+          enable = true;
+        };
+      };
     };
   };
 
@@ -99,7 +94,10 @@
     enable = true;
   };
 
-
+  programs.steam = {
+    enable = true;
+  };
+  
   programs.kdeconnect.enable = true;
 
   # Configure keymap in X11

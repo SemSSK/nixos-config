@@ -101,8 +101,8 @@
       # Example per-device config
       # See https://wiki.hyprland.org/Configuring/Keywords/#executing for more
       device {
-      name = epic-mouse-v1 
-      sensitivity = -0.5
+        name = epic-mouse-v1 
+        sensitivity = -0.5
       }
 
       # Example windowrule v1
@@ -174,7 +174,7 @@
 
       # window rules
       # opacity
-      windowrule = opacity 0.9 0.9,^(alacritty)$
+      windowrule = opacity 0.9 0.9, title:(^(alacritty)$)
 
       # Brightness control
       bind= ,XF86MonBrightnessDown,exec,brightnessctl set 5%-

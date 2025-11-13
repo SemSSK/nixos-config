@@ -16,7 +16,6 @@ in
 		./vscode.nix
 		./hyprland
     ../themes/themesHomeManager.nix
-		./niri
 	];	
 	
 
@@ -124,7 +123,6 @@ in
 	]);
 
 	home.sessionVariables = {
-		# GTK_THEME = "Adwaita:Dark";
   };
 	
 	programs.bash.enable = true;
