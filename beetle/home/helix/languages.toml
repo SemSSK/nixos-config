@@ -1,0 +1,52 @@
+[language-server.nimlsp]
+command = "nimlsp"
+config.documentFormatting = true
+config.hostInfo = "helix"
+
+[[language]]
+name = "nim"
+auto-format = true
+language-servers = [
+  {name = "nimlsp"},
+]
+
+[[language]]
+name = "cpp"
+auto-format = true
+
+[[language]]
+name = "c"
+auto-format = true
+
+[[language]]
+name = "python"
+auto-format = true
+
+
+[[language]]
+name = "rust"
+
+
+[[language]]
+name = "css"
+auto-format = true
+
+[[language]]
+name = "markdown"
+auto-format = true
+
+[language-server.rust-analyzer]
+rust-analyzer.cachePriming.enable = false
+
+
+[[language]]
+name = "nix"
+scope = "source.nix"
+auto-format = true
+language-servers = ["nixd"]
+
+[language-server.nixd]
+command = "nixd"
+config.documentFormatting = true
+config.hostInfo = "helix"
+

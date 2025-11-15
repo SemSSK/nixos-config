@@ -1,0 +1,64 @@
+window.bar {
+    background-color: transparent;
+    font-size: 5%;
+}
+
+button {
+    min-width: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: transparent;
+}
+
+button:active {
+    background-color: @theme_selected_bg_color;
+}
+
+button:hover {
+    border-bottom: 3px solid @theme_fg_color;
+}
+
+label {
+    font-weight: bold;
+    font-size: medium;
+}
+
+.workspaces button {
+    background-color: @theme_bg_color;
+    border-radius: 100%;
+    margin: 2px;
+}
+
+.workspaces button.focused {
+    border-bottom: 3px solid @theme_selected_bg_color;
+}
+
+.client-title {
+    color: @theme_selected_bg_color;
+}
+
+.notification {
+    color: yellow;
+}
+
+.clock {
+    background-color: @theme_bg_color;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.systray {
+    background-color: @theme_bg_color;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.applauncher {
+    background-color: @theme_bg_color;
+    border-radius: 15px;
+}
+
+levelbar block,
+highlight {
+    min-height: 10px;
+}

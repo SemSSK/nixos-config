@@ -34,6 +34,14 @@
           stylix.nixosModules.stylix
         ];
       };
+      #laptop 2
+      beetle = lib.nixosSystem {
+        inherit system;
+        specialArgs = inputs // {inherit upkgs;};
+        modules = [
+          ./beetle/system
+        ];
+      };
       #desktop
       cockroach = lib.nixosSystem {
         inherit system;
@@ -51,6 +59,14 @@
         modules = [
           ./caterpillar/home
           stylix.homeManagerModules.stylix
+        ];
+      };
+      
+      "sem@beetle" = lib.homeManagerConfiguration {
+        extraSpecialArgs = inputs // {inherit upkgs;};
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        modules = [
+          ./beetle/home
         ];
       };
       #desktop
