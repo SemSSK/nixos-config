@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./gamingconf.nix
       ./plymouth.nix
+      ./remote_play.nix
     ];
 
   # Bootloader.
