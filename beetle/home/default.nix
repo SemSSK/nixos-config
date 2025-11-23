@@ -14,6 +14,8 @@ in
 		./helix
 		./vscode.nix
 		./dconf
+		../themes/themesBase.nix
+		../themes/themesHomeManager.nix
 	];	
 	
 
@@ -106,8 +108,7 @@ in
 	#Installed packages
 	home.packages = with pkgs; [
 		htop
-	]++ unixCommandsReplacement ++ (with upkgs; [
-	]);
+	]++ unixCommandsReplacement;
 
 	home.sessionVariables = {
   };

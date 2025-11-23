@@ -10,6 +10,8 @@
       ./hardware-configuration.nix
       ./gamingconf.nix
       ./plymouth.nix
+      ../themes/themesBase.nix
+      ../themes/themesNixos.nix
       # ./remote_play.nix
     ];
 

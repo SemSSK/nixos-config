@@ -40,6 +40,8 @@
         specialArgs = inputs // {inherit upkgs;};
         modules = [
           ./beetle/system
+          stylix.nixosModules.stylix
+          
         ];
       };
       #desktop
@@ -67,6 +69,7 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [
           ./beetle/home
+          stylix.homeManagerModules.stylix
         ];
       };
       #desktop
