@@ -3,7 +3,7 @@ let
 	unixCommandsReplacement = with upkgs; [
 		sd
 		fd
-		du-dust
+		dust
 		ripgrep
 		fzf
 	];
@@ -113,13 +113,9 @@ in
 		unrar
 		unzip
 		zip
-		okular
-		lutris
+		kdePackages.okular
 		wineWowPackages.waylandFull
-		# openmw
-		# openmw-nix.packages."x86_64-linux".openmw-dev
-		# freetube
-		# bottles
+		sillytavern
 	]);
 
 	home.sessionVariables = {

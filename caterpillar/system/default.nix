@@ -17,6 +17,7 @@
       ../themes/themesNixos.nix
       # ./postgresql.nix
       ../cachix.nix
+      # ./local_llm.nix
     ];
   # Bootloader.
   boot.loader.systemd-boot.enable = false;
@@ -220,7 +221,7 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  # networking.firewall.allowedTCPPorts = [ 34820 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
