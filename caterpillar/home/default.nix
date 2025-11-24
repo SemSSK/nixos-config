@@ -11,11 +11,12 @@ let
 in
 {
 	imports = [
+		# ./hyprland
 		./picom.nix
 		./helix
 		./vscode.nix
-		./hyprland
     ../themes/themesHomeManager.nix
+    ./dconf
 	];	
 	
 

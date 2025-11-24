@@ -72,16 +72,13 @@
 
   
   # Enable the X11 windowing system.
+
   services = {
-    displayManager.defaultSession = "hyprland";
     xserver = {
       enable = true;
     
-      desktopManager = {
-        xterm.enable = false;
-        # Enable Xfce Desktop Environment
-        xfce.enable = true;
-      };
+      desktopManager.gnome.enable = true;
+
       displayManager.lightdm = {
         enable = true;
         greeters.slick = {
@@ -91,9 +88,6 @@
     };
   };
 
-  programs.hyprland = {
-    enable = true;
-  };
 
   programs.steam = {
     enable = true;
