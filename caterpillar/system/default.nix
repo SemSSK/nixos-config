@@ -75,15 +75,10 @@
 
   services = {
     xserver = {
-      enable = true;
-    
+      enable = true;    
       desktopManager.gnome.enable = true;
-
-      displayManager.lightdm = {
+      displayManager.gdm = {
         enable = true;
-        greeters.slick = {
-          enable = true;
-        };
       };
     };
   };
