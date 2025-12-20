@@ -18,12 +18,11 @@ in
 		../themes/themesHomeManager.nix
 	];	
 	
-
   home.username = "sem";
   home.homeDirectory = "/home/sem";
 
-	
 	programs = {
+
 		
 		eza = {
 			enable = true;
