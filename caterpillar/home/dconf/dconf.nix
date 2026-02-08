@@ -190,12 +190,12 @@ with lib.hm.gvariant;
       translate = true;
     };
 
-    "org/gnome/desktop/background" = {
-      color-shading-type = "solid";
-      picture-options = "zoom";
-      picture-uri = "file:///nix/store/8h4gcf7i2xsnfsf6i4ns06da4a4jy810-Sweet-S3.png";
-      picture-uri-dark = "file:///nix/store/8h4gcf7i2xsnfsf6i4ns06da4a4jy810-Sweet-S3.png";
-    };
+    # "org/gnome/desktop/background" = {
+    #   color-shading-type = "solid";
+    #   picture-options = "zoom";
+    #   picture-uri = "file:///nix/store/8h4gcf7i2xsnfsf6i4ns06da4a4jy810-Sweet-S3.png";
+    #   picture-uri-dark = "file:///nix/store/8h4gcf7i2xsnfsf6i4ns06da4a4jy810-Sweet-S3.png";
+    # };
 
     "org/gnome/desktop/break-reminders/eyesight" = {
       play-sound = true;
@@ -331,9 +331,9 @@ with lib.hm.gvariant;
       button-layout = "icon,menu:minimize,maximize,close";
     };
 
-    "org/gnome/eog/view" = {
-      background-color = "#1e1e2e";
-    };
+    # "org/gnome/eog/view" = {
+    #   background-color = "#1e1e2e";
+    # };
 
     "org/gnome/epiphany" = {
       ask-for-default = false;
