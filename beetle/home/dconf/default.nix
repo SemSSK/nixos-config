@@ -176,9 +176,6 @@ with lib.hm.gvariant;
       unmaximize = [ "<Super>Down" "<Alt>F5" ];
     };
 
-    "org/gnome/eog/view" = {
-      background-color = "#1e1e2e";
-    };
 
     "org/gnome/evolution-data-server" = {
       migrated = true;

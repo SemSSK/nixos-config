@@ -107,7 +107,7 @@
 
   # Install firefox.
   programs.firefox.enable = true;
-
+  programs.kdeconnect.enable = true;
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -148,6 +148,16 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
+  networking.firewall = { 
+    enable = true;
+    allowedTCPPortRanges = [ 
+      { from = 4747; to = 4747; } # KDE Connect
+      
+    ];  
+    allowedUDPPortRanges = [ 
+      { from = 4747; to = 4747; } # KDE Connect
+    ];  
+  };  
   # networking.firewall.allowedTCPPorts = [ 22 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
