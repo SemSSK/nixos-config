@@ -1,15 +1,20 @@
-{upkgs,...}:
+{upkgs,lib,...}:
+let
+  files = map (s: {
+    "${s}" = {
+      target = ".config/helix/snippets/${s}";
+      source = ./snippets/${s};
+    };
+  }) (lib.attrNames (builtins.readDir ./snippets));
+  files_mappings = lib.foldl' (acc: x: acc // x) {} files; 
+in
 {
-  # home.file = {
-  #   "config.toml" = {
-  #     target = ".config/helix/config.toml";
-  #     source = ./config.toml;
-  #   };
+  home.file = {
   #   "language.toml" = {
   #     target = ".config/helix/languages.toml";
   #     source = ./languages.toml;
   #   };
-  # };
+  } // files_mappings;
   
   programs.helix = {
     enable = true;
@@ -19,5 +24,6 @@
   };  
   home.packages = with upkgs; [
     nixd
+    simple-completion-language-server
   ];
 }

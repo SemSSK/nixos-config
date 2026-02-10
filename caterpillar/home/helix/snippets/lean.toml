@@ -1,0 +1,283 @@
+# --- Logic ---
+[[snippets]]
+prefix = "\\forall"
+scope = ["lean"]
+body = "∀"
+description = "Universal quantifier"
+
+[[snippets]]
+prefix = "\\exists"
+scope = ["lean"]
+body = "∃"
+description = "Existential quantifier"
+
+[[snippets]]
+prefix = "\\and"
+scope = ["lean"]
+body = "∧"
+description = "Logical AND"
+
+[[snippets]]
+prefix = "\\or"
+scope = ["lean"]
+body = "∨"
+description = "Logical OR"
+
+[[snippets]]
+prefix = "\\not"
+scope = ["lean"]
+body = "¬"
+description = "Logical NOT"
+
+[[snippets]]
+prefix = "\\imp"
+scope = ["lean"]
+body = "→"
+description = "Logical implication"
+
+[[snippets]]
+prefix = "\\iff"
+scope = ["lean"]
+body = "↔"
+description = "Logical equivalence"
+
+[[snippets]]
+prefix = "\\top"
+scope = ["lean"]
+body = "⊤"
+description = "True"
+
+[[snippets]]
+prefix = "\\bot"
+scope = ["lean"]
+body = "⊥"
+description = "False"
+
+# --- Equality / Relations ---
+[[snippets]]
+prefix = "\\eq"
+scope = ["lean"]
+body = "="
+description = "Equality"
+
+[[snippets]]
+prefix = "\\neq"
+scope = ["lean"]
+body = "≠"
+description = "Not equal"
+
+[[snippets]]
+prefix = "\\equiv"
+scope = ["lean"]
+body = "≡"
+description = "Equivalence"
+
+[[snippets]]
+prefix = "\\le"
+scope = ["lean"]
+body = "≤"
+description = "Less than or equal"
+
+[[snippets]]
+prefix = "\\ge"
+scope = ["lean"]
+body = "≥"
+description = "Greater than or equal"
+
+# --- Type Theory / HoTT ---
+[[snippets]]
+prefix = "\\Pi"
+scope = ["lean"]
+body = "Π"
+description = "Pi type"
+
+[[snippets]]
+prefix = "\\Sigma"
+scope = ["lean"]
+body = "Σ"
+description = "Sigma type"
+
+[[snippets]]
+prefix = "\\lambda"
+scope = ["lean"]
+body = "λ"
+description = "Lambda"
+
+[[snippets]]
+prefix = "\\fun"
+scope = ["lean"]
+body = "λ"
+description = "Function / Lambda"
+
+[[snippets]]
+prefix = "\\prod"
+scope = ["lean"]
+body = "∏"
+description = "Product type"
+
+[[snippets]]
+prefix = "\\sum"
+scope = ["lean"]
+body = "∑"
+description = "Sum type"
+
+[[snippets]]
+prefix = "\\Omega"
+scope = ["lean"]
+body = "Ω"
+description = "Loop space / Omega type"
+
+[[snippets]]
+prefix = "\\id"
+scope = ["lean"]
+body = "𝟙"
+description = "Identity morphism"
+
+[[snippets]]
+prefix = "\\comp"
+scope = ["lean"]
+body = "∘"
+description = "Composition"
+
+# --- Paths / Homotopy ---
+[[snippets]]
+prefix = "\\path"
+scope = ["lean"]
+body = "≃"
+description = "Path / Homotopy equivalence"
+
+[[snippets]]
+prefix = "\\iso"
+scope = ["lean"]
+body = "≅"
+description = "Isomorphism"
+
+[[snippets]]
+prefix = "\\sim"
+scope = ["lean"]
+body = "∼"
+description = "Similarity / equivalence"
+
+[[snippets]]
+prefix = "\\hom"
+scope = ["lean"]
+body = "⟶"
+description = "Hom-set arrow"
+
+# --- Sets / Membership ---
+[[snippets]]
+prefix = "\\in"
+scope = ["lean"]
+body = "∈"
+description = "Element of"
+
+[[snippets]]
+prefix = "\\notin"
+scope = ["lean"]
+body = "∉"
+description = "Not element of"
+
+[[snippets]]
+prefix = "\\subset"
+scope = ["lean"]
+body = "⊂"
+description = "Proper subset"
+
+[[snippets]]
+prefix = "\\subseteq"
+scope = ["lean"]
+body = "⊆"
+description = "Subset"
+
+[[snippets]]
+prefix = "\\cup"
+scope = ["lean"]
+body = "∪"
+description = "Union"
+
+[[snippets]]
+prefix = "\\cap"
+scope = ["lean"]
+body = "∩"
+description = "Intersection"
+
+[[snippets]]
+prefix = "\\empty"
+scope = ["lean"]
+body = "∅"
+description = "Empty set"
+
+# --- Brackets / Structure ---
+[[snippets]]
+prefix = "\\langle"
+scope = ["lean"]
+body = "⟨"
+description = "Left angle bracket"
+
+[[snippets]]
+prefix = "\\rangle"
+scope = ["lean"]
+body = "⟩"
+description = "Right angle bracket"
+
+# --- Greek letters (minimal useful set) ---
+[[snippets]]
+prefix = "\\alpha"
+scope = ["lean"]
+body = "α"
+description = "Greek alpha"
+
+[[snippets]]
+prefix = "\\beta"
+scope = ["lean"]
+body = "β"
+description = "Greek beta"
+
+[[snippets]]
+prefix = "\\gamma"
+scope = ["lean"]
+body = "γ"
+description = "Greek gamma"
+
+[[snippets]]
+prefix = "\\delta"
+scope = ["lean"]
+body = "δ"
+description = "Greek delta"
+
+[[snippets]]
+prefix = "\\epsilon"
+scope = ["lean"]
+body = "ε"
+description = "Greek epsilon"
+
+[[snippets]]
+prefix = "\\theta"
+scope = ["lean"]
+body = "θ"
+description = "Greek theta"
+
+[[snippets]]
+prefix = "\\pi"
+scope = ["lean"]
+body = "π"
+description = "Greek pi"
+
+[[snippets]]
+prefix = "\\phi"
+scope = ["lean"]
+body = "φ"
+description = "Greek phi"
+
+[[snippets]]
+prefix = "\\psi"
+scope = ["lean"]
+body = "ψ"
+description = "Greek psi"
+
+[[snippets]]
+prefix = "\\omega"
+scope = ["lean"]
+body = "ω"
+description = "Greek omega"
+
