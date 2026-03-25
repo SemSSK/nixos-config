@@ -56,7 +56,7 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-  displayManager.sddm = {
+  services.displayManager.sddm = {
     wayland.enable = true;
     enable = true;
     theme = "sddm-astronaut-theme";
@@ -69,6 +69,9 @@
     layout = "fr";
     variant = "azerty";
   };
+
+  services.upower.enable = true;
+  services.power-profiles-daemon.enable = true;
 
   # Configure console keymap
   console.keyMap = "fr";
@@ -135,7 +138,7 @@
     nerd-fonts.fira-code
     nerd-fonts.droid-sans-mono
     nerd-fonts.jetbrains-mono
-    noto-fonts noto-fonts-extra noto-fonts-cjk-sans noto-fonts-cjk-serif
+    noto-fonts noto-fonts-cjk-sans noto-fonts-cjk-serif
   ];
 
 

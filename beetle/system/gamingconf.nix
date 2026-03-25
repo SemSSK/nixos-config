@@ -36,5 +36,5 @@
   programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
 
-  environment.systemPackages = with pkgs; [glxinfo mangohud protonup-qt lutris bottles heroic discord droidcam];
+  environment.systemPackages = with pkgs; [mesa-demos mangohud protonup-qt lutris bottles heroic discord droidcam];
 }

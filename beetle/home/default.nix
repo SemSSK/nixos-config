@@ -13,7 +13,7 @@ in
 	imports = [
 		./helix
 		./vscode.nix
-		./dconf
+		# ./dconf
 		../themes/themesBase.nix
 		../themes/themesHomeManager.nix
 	];	
