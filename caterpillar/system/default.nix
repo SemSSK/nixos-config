@@ -11,13 +11,14 @@
   };  
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
       # ./flatpak.nix
+      # ../../niri/system.nix 
+      # ./postgresql.nix
+      # ../cachix.nix
+      # ./local_llm.nix
+      ./hardware-configuration.nix
       ./plymouth.nix
       ../themes/themesNixos.nix
-      # ./postgresql.nix
-      ../cachix.nix
-      # ./local_llm.nix
     ];
   # Bootloader.
   boot.loader.systemd-boot.enable = false;
@@ -76,18 +77,16 @@
   services = {
     xserver = {
       enable = true;    
-      desktopManager.gnome.enable = true;
-      displayManager.gdm = {
-        enable = true;
-      };
+    };
+    displayManager.sddm = {
+      wayland.enable = true;
+      enable = true;
+      theme = "sddm-astronaut-theme";
     };
   };
 
   programs.xwayland.enable = true;
 
-  programs.steam = {
-    enable = true;
-  };
   
   programs.kdeconnect.enable = true;
 
@@ -180,12 +179,11 @@
 		xfce.xfce4-whiskermenu-plugin
 		xfce.xfce4-pulseaudio-plugin
 		xfce.xfce4-clipman-plugin
-		glxinfo
+		mesa-demos
 		xarchiver
     steam-run
   ];
 
-  # programs.steam.enable = true;
 
   #Default shell
   environment.shells = with pkgs; [
@@ -233,10 +231,6 @@
 		options = "--delete-older-than 7d";
   };
 	nix.settings.auto-optimise-store = true;
-  nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
-  };
   nix.channel.enable = false;
 
 	programs.thunar.enable = true;
@@ -254,7 +248,7 @@
     nerd-fonts.fira-code
     nerd-fonts.droid-sans-mono
     nerd-fonts.jetbrains-mono
-    noto-fonts noto-fonts-extra noto-fonts-cjk-sans noto-fonts-cjk-serif
+    noto-fonts noto-fonts-cjk-sans noto-fonts-cjk-serif
   ];
 
   

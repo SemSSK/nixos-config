@@ -115,8 +115,6 @@ in
 		unzip
 		zip
 		kdePackages.okular
-		wineWowPackages.waylandFull
-		sillytavern
 	]);
 
 	home.sessionVariables = {
