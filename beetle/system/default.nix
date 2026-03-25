@@ -111,6 +111,8 @@
   # Install firefox.
   programs.firefox.enable = true;
   programs.kdeconnect.enable = true;
+  programs.xwayland.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
