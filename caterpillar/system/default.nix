@@ -81,7 +81,7 @@
     displayManager.sddm = {
       wayland.enable = true;
       enable = true;
-      theme = "sddm-astronaut-theme";
+      theme = "${pkgs.sddm-astronaut}/share/sddm/themes/sddm-astronaut-theme";
     };
   };
 
@@ -176,9 +176,7 @@
   environment.systemPackages = with pkgs; [
 		vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
 		# virt-manager
-		xfce.xfce4-whiskermenu-plugin
-		xfce.xfce4-pulseaudio-plugin
-		xfce.xfce4-clipman-plugin
+		kdePackages.qtmultimedia
 		mesa-demos
 		xarchiver
     steam-run
