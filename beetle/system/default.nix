@@ -59,7 +59,7 @@
   services.displayManager.sddm = {
     wayland.enable = true;
     enable = true;
-    theme = "sddm-astronaut-theme";
+    theme = "${pkgs.sddm-astronaut}/share/sddm/themes/sddm-astronaut-theme";
   };
 
   # Enable the GNOME Desktop Environment.
@@ -124,7 +124,7 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
-   sddm-astronaut
+    kdePackages.qtmultimedia
   ];
 
   programs.git.enable = true;
