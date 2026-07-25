@@ -155,7 +155,8 @@
       pavucontrol
     ];
   };
-  
+
+    
   
   # Unable pulseaudio
   nixpkgs.config.pulseaudio = true;
@@ -229,6 +230,7 @@
 		options = "--delete-older-than 7d";
   };
 	nix.settings.auto-optimise-store = true;
+	nix.settings.trusted-users = ["root" "sem"];
   nix.channel.enable = false;
 
 	programs.thunar.enable = true;
