@@ -149,12 +149,16 @@
     extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd" ];
     shell = pkgs.fish;
     packages = with pkgs; [
-      neofetch
+      fastfetch
       vlc
       libreoffice-qt
       pavucontrol
     ];
   };
+
+  #powerprofile
+  services.upower.enable = true;
+  services.power-profiles-daemon.enable = true;
 
     
   
