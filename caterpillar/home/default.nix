@@ -12,7 +12,7 @@ in
 {
 	imports = [
 		# ./hyprland
-		./picom.nix
+		# ./picom.nix
 		./helix
 		./vscode.nix
     ../themes/themesHomeManager.nix
